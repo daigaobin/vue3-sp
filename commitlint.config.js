@@ -1,7 +1,7 @@
 /*
  * @Author: 牧鱼
  * @Date: 2022-04-07 16:00:16
- * @LastEditTime: 2022-04-07 16:13:28
+ * @LastEditTime: 2022-04-07 16:25:00
  * @LastEditors: 牧鱼
  * @Description:
  * @FilePath: \vue3-sp\commitlint.config.js
@@ -27,5 +27,6 @@ module.exports = {
         "build", //打包
       ],
     ],
+    "subject-case": [0],
   },
 };
