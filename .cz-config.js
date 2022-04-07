@@ -1,79 +1,40 @@
 /*
  * @Author: 牧鱼
  * @Date: 2022-03-31 17:42:18
- * @LastEditTime: 2022-03-31 17:42:19
+ * @LastEditTime: 2022-04-07 16:19:48
  * @LastEditors: 牧鱼
  * @Description:
- * @FilePath: \vue3\.cz-config.js
+ * @FilePath: \vue3-sp\.cz-config.js
  */
 module.exports = {
   types: [
-    { value: "feat", name: "feat:     A new feature" },
-    { value: "fix", name: "fix:      A bug fix" },
-    { value: "docs", name: "docs:     Documentation only changes" },
-    {
-      value: "style",
-      name: "style:    Changes that do not affect the meaning of the code\n            (white-space, formatting, missing semi-colons, etc)",
-    },
+    { value: "feat", name: "feat:新功能" },
+    { value: "fix", name: "fix:修复" },
+    { value: "docs", name: "docs:文档变更" },
+    { value: "style", name: "style:代码格式(不影响代码运行的变动)" },
     {
       value: "refactor",
-      name: "refactor: A code change that neither fixes a bug nor adds a feature",
+      name: "refactor:重构(既不是增加feature，也不是修复bug)",
     },
-    {
-      value: "perf",
-      name: "perf:     A code change that improves performance",
-    },
-    { value: "test", name: "test:     Adding missing tests" },
-    {
-      value: "chore",
-      name: "chore:    Changes to the build process or auxiliary tools\n            and libraries such as documentation generation",
-    },
-    { value: "revert", name: "revert:   Revert to a commit" },
-    { value: "WIP", name: "WIP:      Work in progress" },
+    { value: "perf", name: "perf:性能优化" },
+    { value: "test", name: "test:增加测试" },
+    { value: "chore", name: "chore:构建过程或者辅助工具变动" },
+    { value: "revert", name: "revert:回退" },
+    { value: "build", name: "build:打包" },
   ],
-
-  scopes: [
-    { name: "accounts" },
-    { name: "admin" },
-    { name: "exampleScope" },
-    { name: "changeMe" },
-  ],
-
-  allowTicketNumber: false,
-  isTicketNumberRequired: false,
-  ticketNumberPrefix: "TICKET-",
-  ticketNumberRegExp: "\\d{1,5}",
-
-  // it needs to match the value for field type. Eg.: 'fix'
-  /*
-  scopeOverrides: {
-    fix: [
-      {name: 'merge'},
-      {name: 'style'},
-      {name: 'e2eTest'},
-      {name: 'unitTest'}
-    ]
-  },
-  */
-  // override the messages, defaults are as follows
   messages: {
-    type: "Select the type of change that you're committing:",
-    scope: "\nDenote the SCOPE of this change (optional):",
-    // used if allowCustomScopes is true
-    customScope: "Denote the SCOPE of this change:",
-    subject: "Write a SHORT, IMPERATIVE tense description of the change:\n",
-    body: 'Provide a LONGER description of the change (optional). Use "|" to break new line:\n',
+    type: "请选择提交的类型:",
+    customScope: "请输入修正的范围（可选）:",
+    subject: "请简要描述提交（必填）:",
+    body: "请输入详细描述（可选）:\n",
     breaking: "List any BREAKING CHANGES (optional):\n",
-    footer:
-      "List any ISSUES CLOSED by this change (optional). E.g.: #31, #34:\n",
-    confirmCommit: "Are you sure you want to proceed with the commit above?",
+    footer: "请输入要关闭的issue（可选）:\n",
+    confirmCommit: "确认要使用以上信息提交？（y/n）",
   },
-
-  allowCustomScopes: true,
-  allowBreakingChanges: ["feat", "fix"],
+  // allowCustomScopes: true,
+  // allowBreakingChanges: ["feat", "fix"],
   // skip any questions you want
-  skipQuestions: ["body"],
-
+  // skipQuestions: ["body"],
   // limit subject length
   subjectLimit: 100,
 };
