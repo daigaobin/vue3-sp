@@ -1,7 +1,7 @@
 <!--
  * @Author: 牧鱼
  * @Date: 2022-03-31 17:38:33
- * @LastEditTime: 2022-04-07 16:22:49
+ * @LastEditTime: 2022-04-07 16:36:34
  * @LastEditors: 牧鱼
  * @Description: 
  * @FilePath: \vue3-sp\src\App.vue
@@ -14,7 +14,7 @@
   <router-view />
 </template>
 
-<style lang="scss"> 
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
